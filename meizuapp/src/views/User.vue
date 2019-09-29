@@ -2,7 +2,7 @@
     <div id="user">
         <header>
             <div>
-                <a href=""><i class="iconfont icon-jiantouzuo"></i></a>
+                <a @click="gotoHome"><i class="iconfont icon-jiantouzuo"></i></a>
             </div>
             <div class="username" @click="login">
                 <div>
@@ -123,6 +123,9 @@
                 this.hidden=false;
                 localStorage.clear();
                 location.reload();
+            },
+            gotoHome(){
+                this.$router.push({path:'/'});
             }
         }
     }
